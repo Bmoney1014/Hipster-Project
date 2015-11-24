@@ -11,6 +11,7 @@ public class Hipster
 		this.name = "";
 		this.hipsterPhrases = new String[4];
 		setupArray();
+		setupBooks();
 	}
 	private void setupArray()
 	{
@@ -23,6 +24,7 @@ public class Hipster
 	private void setupBooks()
 	{
 		Book firstBook, secondBook, thirdBook;
+		
 		firstBook = new Book();
 		firstBook.setAuthor("Stephen King");
 		firstBook.setTitle("The Shining");
@@ -43,6 +45,11 @@ public class Hipster
 		thirdBook.setSubject("Post Apocalyptic");
 		thirdBook.setPageCount(288);
 		thirdBook.setPrice(9.99);
+		
+		hipsterBooks[0] = firstBook;
+		hipsterBooks[1] = secondBook;
+		hipsterBooks[2] = thirdBook;
+		
 	}
 	
 	public Hipster(String name)
@@ -69,10 +76,12 @@ public class Hipster
 	{
 		this.hipsterPhrases = hipsterPhrases;
 	}
+	
 	public Book[] getHipsterBooks()
 	{
 		return hipsterBooks;
 	}
+	
 	public void setHipsterBooks(Book[] hipsterBooks)
 	{
 		this.hipsterBooks = hipsterBooks;
